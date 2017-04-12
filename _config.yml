@@ -26,9 +26,9 @@ navbar-links:
     - Bio: "aboutme"
     - CV: "cv"
   Research:
-    - Placeholder1: "aboutme"
-    - Placeholder2: "aboutme"
-  Resources:
+    - American Kestrel Phenology: "aboutme"
+    - Bachman's Sparrow Breeding Ecology: "aboutme"
+  Additional Info:
     - Kestrel Full Cycle Phenology Project: "https://fullcyclephenology.com/"
     - Heath Lab: "https://biology.boisestate.edu/gcebirds/"
 
