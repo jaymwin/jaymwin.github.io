@@ -38,7 +38,6 @@ navbar-links:
   Resources:
     - American Kestrel Full Cycle Phenology Project: "https://fullcyclephenology.com/"
     - Heath Lab: "https://biology.boisestate.edu/gcebirds/"
-    - Ecology, Evolution, & Behavior Program @ Boise State "https://eeb.boisestate.edu/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
