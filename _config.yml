@@ -27,7 +27,8 @@ navbar-links:
     - CV: "cv"
     - Archives: "tags"
   Research:
-    - Rana boylii: "RanaBoylii.html"
+    - Placeholder1: "aboutme"
+    - Placeholder2: "aboutme"
   Resources:
     - Kestrel Full Cycle Phenology Project: "https://fullcyclephenology.com/"
     - Heath Lab: "https://biology.boisestate.edu/gcebirds/"
