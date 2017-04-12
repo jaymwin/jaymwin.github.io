@@ -36,10 +36,9 @@ navbar-links:
     - Humboldt NWR Climate: "http://shiny.cws.ucdavis.edu:3838/shiny/rapeek/Humboldt_GCM/"
     - Tadpole Gosner Staging: "http://shiny.cws.ucdavis.edu:3838/shiny/rapeek/Gosner_photos/"
   Resources:
-    - Data Carpentry: "http://www.datacarpentry.org/"
-    - Software Carpentry: "http://software-carpentry.org/"
-    - Davis R Users Group: "https://d-rug.github.io/"
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+    - American Kestrel Full Cycle Phenology Project: "https://fullcyclephenology.com/"
+    - Heath Lab: "https://biology.boisestate.edu/gcebirds/"
+    - Ecology, Evolution, & Behavior Program @ Boise State "https://eeb.boisestate.edu/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
