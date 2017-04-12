@@ -27,7 +27,8 @@ navbar-links:
     - CV: "cv"
   Research:
     - American Kestrel Phenology: "amke_project"
-    - Bachman's Sparrow Breeding Ecology: "RanaBoylii.html"
+    - Bachman's Sparrow Breeding Ecology: "bacs_project"
+    - Example: "RanaBoylii.html"
   Additional Info:
     - Kestrel Full Cycle Phenology Project: "https://fullcyclephenology.com/"
     - Heath Lab: "https://biology.boisestate.edu/gcebirds/"
