@@ -25,7 +25,6 @@ navbar-links:
   About Me:
     - Bio: "aboutme"
     - CV: "cv"
-    - Archives: "tags"
   Research:
     - Placeholder1: "aboutme"
     - Placeholder2: "aboutme"
