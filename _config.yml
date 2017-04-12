@@ -9,13 +9,13 @@
 #baseurl: "/projectname"
 
 # Name of website
-title: Rivers & Ranids
+title: Jason M. Winiarski
 bigimg: "/img/20150912_shallnotpass.jpg"
 
 # Short description of your site
-url: "http://ryanpeek.github.io"
+url: "http://jaymwin.github.io"
 baseurl: ""
-description: A blog about Rivers (and Frogs)!
+description: PhD Student - Ecology, Evolution, & Behavior
 
 
 # --- Navigation bar options --- #
@@ -50,11 +50,11 @@ avatar: "/img/P1080821.JPG"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Ryan
-  email: "rapeek @ ucdavis.edu"
+  name: Jay Winiarski
+  email: "jmwiniarski @ ucdavis.edu"
   facebook: yourname  # eg. daattali
-  github: ryanpeek
-  twitter: riverpeek
+  github: jaymwin
+  twitter: jmwiniar
   linkedin: yourlink  # eg. "pub/dean-attali/8/946/143"
   stackoverflow: yourlink  # eg. "3943160/daattali"
 
@@ -72,15 +72,15 @@ footer-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "ryanpeek.github.io"
+url-pretty: "jaymwin.github.io"
 
 # --- Misc --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-disqus: "ryanpeek-github-io"
+disqus: "jaymwin-github-io"
 
 # Fill in your Google Analytics ID to track your website using GA
-google_analytics: "UA-87260839-1"
+google_analytics: #"UA-87260839-1"
 # old through gmail "UA-80552998-1"
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
