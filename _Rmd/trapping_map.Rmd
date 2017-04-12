@@ -1,0 +1,55 @@
+---
+layout: post
+title: ""
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(screenshot.force = FALSE)
+```
+
+# Kestrel Trapping Locations
+
+This is just a placeholder...
+
+```{r, echo=F, warning=F, message=F}
+
+library(leaflet)
+library(leaflet.extras)
+library(readr)
+library(dplyr)
+
+rpi <- read_csv("https://raw.github.com/jaymwin/RPI/master/RPI_sites.csv")
+
+# filter out focal sites
+amkesites<- subset(rpi, Site %in% c(
+                                    "Cheland Ridge",
+                                    "Florida Keys Hawkwatch",
+                                    "Goshute Mountains",
+                                    "Hawk Ridge",
+                                    "Corpus Christi",
+                                    "Braddock Bay",
+                                    "Manzano Mountains",
+                                    "Hawk Mountain Sanctuary",
+                                    "Holiday Beach Conservation Area"))
+
+AMKE_popup <- paste0("<strong>Site: </strong>", 
+      amkesites$Site)
+
+m <- leaflet(amkesites) %>% 
+  addCircleMarkers(~Long, ~Lat, popup=AMKE_popup,
+                   weight = 20, color=NA, group="Site",
+                   fillOpacity = 0.5, radius = 8,
+                   fillColor = "darkblue") %>%
+  # Add tiles
+  addProviderTiles("Stamen.Terrain", group = "Topographical") %>%
+  addProviderTiles("OpenStreetMap.Mapnik", group = "Road map") %>%
+  #setView(lng = -98.5795, lat = 39.8282,  zoom = 3.5) %>% 
+  addLayersControl(position = 'bottomleft',
+                   baseGroups = c("Topographical", "Road map"),
+                   overlayGroups = c("AMKE locations"),
+                   options = layersControlOptions(collapsed = FALSE))
+m
+
+```

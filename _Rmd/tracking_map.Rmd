@@ -1,0 +1,57 @@
+---
+layout: post
+title: ""
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(screenshot.force = FALSE)
+```
+
+# Kestrel Satellite Telemetry
+
+This is just a placeholder...fooling around with BWHA data from Hawk Mountain...
+
+```{r, echo=F, warning=F, message=F}
+
+library(leaflet.extras)
+library(leaflet)
+
+BWHA<-read.csv("/Users/Jay/Desktop/BWHA.csv")
+#head(BWHA)
+groups = as.character(unique(BWHA$local_identifier))
+groupColors = colorFactor(palette = "RdYlBu", domain = BWHA$local_identifier)
+
+
+map = leaflet(BWHA) %>% addTiles(group = "OpenStreetMap")
+for(g in groups){
+  d = BWHA[BWHA$local_identifier == g, ]
+  map = map %>% addPolylines(data = d, lng = ~location_long, lat = ~location_lat, 
+                                 color = ~groupColors(local_identifier),
+                                 group = g)
+  
+}
+#map %>% addLayersControl(overlayGroups = groups)
+
+#levels(BWHA$local_identifier)
+#manually pick colors
+groupColors <- colorFactor(c("navy", "red", "orange"), domain = BWHA$local_identifier)
+
+#devtools::install_github('rstudio/leaflet')
+#devtools::install_github('bhaskarvk/leaflet.extras')
+
+map = leaflet(BWHA) %>% addProviderTiles(providers$Stamen.Terrain)
+#map
+for(g in groups){
+  d = BWHA[BWHA$local_identifier == g, ]
+  map = map %>% addPolylines(data = d, lng = ~location_long, lat = ~location_lat, 
+                             weight = 1,
+                             opacity = 0.5,
+                             color = ~groupColors(local_identifier),
+                             group = g) 
+}
+abc<-map %>% addLayersControl(overlayGroups = groups) %>%
+  addLegend("bottomleft", colors = c("navy", "red", "orange"), labels = c("Kit", "Ridgena", "Sadie"))
+abc
+```
