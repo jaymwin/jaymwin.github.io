@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ""
-subtitle: "American Kestrel Full Cycle Phenology" 
+subtitle: "American Kestrel Phenology" 
 ---
 
 ![AMKE project logo](/img/kestrel_logo.jpg)
