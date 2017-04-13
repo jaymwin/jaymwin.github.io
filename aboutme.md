@@ -8,8 +8,9 @@ subtitle: "About Me"
 
 I'm a PhD student in Ecology, Evolution, & Behavior at Boise State University...
 
+## Research Interests
 
-Contact info:
+## Contact Info
 
 **Jay Winiarski**  
 *PhD Student (August 2017)*  
