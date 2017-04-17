@@ -7,7 +7,7 @@ fig_caption: yes
 
 ![A: Example receiver operator curves (ROC) for cross-validation runs of large flocks during the Winter Blitz period, 2009-2011. The dotted line represents the null model of random model perfomance. B:Area under the receiver operator curve (AUC) across flock size and observation classes for the Winter Blitz period, 2009-2011. Error bars represent the 95% confidence interval about mean AUC values across cross-validation runs. All plot data used in this document are available at:](/img/kestrel_logo.jpg)
 
-{:.image-caption}
+{:.image-caption}  
 *The caption for my image*
 
 &nbsp;
