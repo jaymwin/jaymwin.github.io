@@ -2,6 +2,7 @@
 layout: page
 title: ""
 subtitle: "American Kestrel Phenology" 
+fig_caption: yes
 ---
 
 ![AMKE project logo](/img/kestrel_logo.jpg)
