@@ -13,7 +13,7 @@ I'm a PhD student in Ecology, Evolution, & Behavior at Boise State University...
 ## Contact Info
 
 **Jay Winiarski**  
-*PhD Student (August 2017)*  
+*PhD Student (beginning August 2017)*  
 Department of Biological Sciences  
 Boise State University  
 Boise, ID 83725  
