@@ -37,18 +37,18 @@ amkesites<- subset(rpi, Site %in% c(
 AMKE_popup <- paste0("<strong>Site: </strong>", 
       amkesites$Site)
 
-m <- leaflet(amkesites) %>% 
+m <- leaflet(rpi) %>% 
   addCircleMarkers(~Long, ~Lat, popup=AMKE_popup,
-                   weight = 20, color=NA, group="Site",
+                   weight = 20, color=NA, group="Season",
                    fillOpacity = 0.5, radius = 8,
-                   fillColor = "darkblue") %>%
+                   fillColor = c("darkblue", "red")) %>%
   # Add tiles
   addProviderTiles("Stamen.Terrain", group = "Topographical") %>%
   addProviderTiles("OpenStreetMap.Mapnik", group = "Road map") %>%
+  addLegend("bottomleft", colors = c("darkblue", "red"), labels = c("Winter", "Migration")) %>%
   #setView(lng = -98.5795, lat = 39.8282,  zoom = 3.5) %>% 
   addLayersControl(position = 'bottomleft',
                    baseGroups = c("Topographical", "Road map"),
-                   overlayGroups = c("AMKE locations"),
                    options = layersControlOptions(collapsed = FALSE))
 m
 
