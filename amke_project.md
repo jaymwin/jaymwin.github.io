@@ -19,11 +19,11 @@ More information to come!
 
 More information to come! 
 
-### Demonstrating the portability of the SCOPE framework for other Department of Defense species of concern.
+### Demonstrating the portability of the SCOPE framework for other Department of Defense species of concern
 
 More information to come! 
 
-#### Tracking American kestrels across the annual cycle using satellite transmitters 
+### Tracking American kestrels across the annual cycle using satellite transmitters 
 
 More information to come! 
 
