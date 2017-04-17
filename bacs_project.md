@@ -18,7 +18,7 @@ Understanding aspects of Bachman’s Sparrow breeding biology may provide valuab
 
 Bachman’s Sparrow populations have declined range-wide during the past 40 years. Peripheral populations have exhibited some of the steepest declines, and the species is now rare or extirpated over much of the northern extent of its historical range. Although home range size and habitat selection have been investigated in the sparrow’s core range, northern populations largely have been unstudied. To better describe the species’ spatial ecology in this region of decline, we quantified home range size, factors influencing home range variation, and microhabitat selection of 37 radio-tagged male Bachman’s Sparrows in the Coastal Plain of North Carolina in 2014 (*N* = 10) and 2015 (*N* = 27). Mean size of home ranges (7.92 ± 0.78 [SE] ha) was larger than most estimates reported from previous studies, and surprisingly was not influenced by variables such as time since fire and reproductive success. Within home ranges, Bachman’s Sparrows used locations with greater density of woody and dead vegetation, and intermediate levels of grass density compared to available locations. Overall, our results indicated that frequent prescribed fire is needed to maintain important microhabitat conditions, and home range requirements may be larger than previously thought. This research is currently in review for consideration  in the *Journal of Field Ornithology*.
 
-![BACS photo](/img/bacs_research.jpeg)
+![BACS photo](/img/pairing_success.jpg)
 
 ### Reproductive consequences of habitat loss and fragmentation
 
