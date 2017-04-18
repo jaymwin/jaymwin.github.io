@@ -11,7 +11,7 @@ knitr::opts_chunk$set(screenshot.force = FALSE)
 
 # Kestrel Trapping Locations
 
-This is just a placeholder...
+This is just a placeholder with nonsense data...
 
 ```{r, echo=F, warning=F, message=F}
 
@@ -22,20 +22,8 @@ library(dplyr)
 
 rpi <- read_csv("https://raw.github.com/jaymwin/RPI/master/RPI_sites.csv")
 
-# filter out focal sites
-amkesites<- subset(rpi, Site %in% c(
-                                    "Cheland Ridge",
-                                    "Florida Keys Hawkwatch",
-                                    "Goshute Mountains",
-                                    "Hawk Ridge",
-                                    "Corpus Christi",
-                                    "Braddock Bay",
-                                    "Manzano Mountains",
-                                    "Hawk Mountain Sanctuary",
-                                    "Holiday Beach Conservation Area"))
-
 AMKE_popup <- paste0("<strong>Site: </strong>", 
-      amkesites$Site)
+      rpi$Site)
 
 m <- leaflet(rpi) %>% 
   addCircleMarkers(~Long, ~Lat, popup=AMKE_popup,
@@ -43,13 +31,12 @@ m <- leaflet(rpi) %>%
                    fillOpacity = 0.5, radius = 8,
                    fillColor = c("darkblue", "red")) %>%
   # Add tiles
-  addProviderTiles("Stamen.Terrain", group = "Topographical") %>%
+  addProviderTiles("Stamen.Terrain", group = "Terrain") %>%
   addProviderTiles("OpenStreetMap.Mapnik", group = "Road map") %>%
-  addLegend("bottomleft", colors = c("darkblue", "red"), labels = c("Winter", "Migration")) %>%
+  addLegend("bottomleft", colors = c("darkblue", "red"), labels = c("Winter sites", "Migration sites")) %>%
   #setView(lng = -98.5795, lat = 39.8282,  zoom = 3.5) %>% 
   addLayersControl(position = 'bottomleft',
-                   baseGroups = c("Topographical", "Road map"),
+                   baseGroups = c("Terrain map", "Road map"),
                    options = layersControlOptions(collapsed = FALSE))
 m
-
 ```
