@@ -4,6 +4,6 @@ title:
 permalink: /cv/
 ---
 
-A current version of my **CV** (last updated April 2017) is included below. A pdf version is available to download [here](https://www.dropbox.com/s/54tx5rtx4liib2d/my_CV_June_2017.pdf?dl=0).
+A current version of my **CV** (last updated July 2017) is included below. A pdf version is available to download [here](https://www.dropbox.com/s/kzp8uqd94n3l1ai/jmwiniarski_CV_07042017.pdf?dl=0).
 
-{% include embedpdf.html code="54tx5rtx4liib2d/my_CV_June_2017.pdf" width=100 height=800 %}
+{% include embedpdf.html code="kzp8uqd94n3l1ai/jmwiniarski_CV_07042017.pdf" width=100 height=800 %}
