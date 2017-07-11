@@ -16,5 +16,5 @@ Ecology, Evolution, & Behavior Program
 Department of Biological Sciences  
 Boise State University  
 Boise, ID 83725  
-**Email**: jmwiniarski@gmail.com  
+**Email**: jasonwiniarski@u.boisestate.edu  
 **Phone**: 401.965.7030  
