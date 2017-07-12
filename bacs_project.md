@@ -14,6 +14,8 @@ Understanding aspects of Bachman’s sparrow breeding biology may provide valuab
 
 [Winiarski, J. M., A. C. Fish, C. E. Moorman, J. P. Carpenter, C. S. DePerno, and J. M. Schillaci. 2017. Nest-site selection and nest survival of Bachman’s Sparrows in two longleaf pine communities. *The Condor: Ornithological Applications* 119:361–374.](https://github.com/jaymwin/jaymwin.github.io/blob/master/pdfs/Winiarski_et_al_2017_Condor.pdf) 
 
+&nbsp;
+
 ![BACS photo](/img/pairing_success.jpg)
 
 ### Reproductive consequences of habitat loss and fragmentation
@@ -21,6 +23,8 @@ Understanding aspects of Bachman’s sparrow breeding biology may provide valuab
 Habitat loss and fragmentation are major threats to bird population persistence. Yet, our understanding of the demographic factors behind the adverse effects of fragmentation remains limited for many species, including the Bachman's sparrow. We quantified the effects of local- and landscape-scale factors on different components of reproductive success (i.e., pairing success and probability of fledging offspring) for 96 male sparrows at eight sites in southeastern North Carolina. Pairing success of monitored sparrows was 69%, and 77% of paired males fledged ≥1 offspring. Habitat amount in the surrounding landscape, rather than local habitat quality, was the most influential predictor of pairing success for male Bachman’s sparrows. In contrast, we documented no predictors of successfully fledging offspring for paired males. We infer that reduced pairing success is limiting reproduction in isolated landscapes and may be a contributing factor for the low occupancy and declines of Bachman’s sparrow in our study region. Overall, our results suggest that managers can promote breeding opportunities for Bachman’s sparrows by prioritizing resources to patches near large, preexisting longleaf pine forest to ensure ≥20% habitat within the surrounding landscape. This research was recently accepted for publication in *Ecosphere*.
 
 [Winiarski, J. M., C. E. Moorman, J. P. Carpenter, and G. R. Hess. 2017. Reproductive consequences of habitat fragmentation for a declining resident bird of the longleaf pine ecosystem. *Ecosphere*.](https://github.com/jaymwin/jaymwin.github.io/blob/master/pdfs/Winiarski_et_al_2017_Condor.pdf) 
+
+&nbsp;
 
 ![BACS tracking](/img/bacs_telemetry.jpg)
 
