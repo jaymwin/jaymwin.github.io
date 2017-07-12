@@ -18,7 +18,7 @@ Understanding aspects of Bachman’s sparrow breeding biology may provide valuab
 
 Check out the press release for the paper [here](https://americanornithologypubsblog.org/2017/05/31/new-details-on-nest-preferences-of-a-declining-sparrow/).
 
-&nbsp;
+----------------------------------------------------------------------------------------------------------------------------------
 
 ![BACS photo](/img/pairing_success.jpg)
 
@@ -28,7 +28,7 @@ Habitat loss and fragmentation are major threats to bird population persistence.
 
 [Winiarski, J. M., C. E. Moorman, J. P. Carpenter, and G. R. Hess. *Accepted*. Reproductive consequences of habitat fragmentation for a declining resident bird of the longleaf pine ecosystem. *Ecosphere*.](https://github.com/jaymwin/jaymwin.github.io/blob/master/pdfs/Winiarski_et_al_2017_Condor.pdf) 
 
-&nbsp;
+----------------------------------------------------------------------------------------------------------------------------------
 
 ![BACS tracking](/img/bacs_telemetry.jpg)
 
