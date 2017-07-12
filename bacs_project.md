@@ -7,6 +7,7 @@ subtitle: "Breeding Ecology of Bachman's Sparrows in North Carolina"
 I spent 2.5 years at North Carolina State University where I earned my MS in Fisheries, Wildlife, & Conservation Biology under the supervision of [Dr. Chris Moorman](https://faculty.cnr.ncsu.edu/christophermoorman/). During that time I studied the breeding ecology of Bachman's sparrows (*Peucaea aestivalis*) in North Carolina. Bachman's sparrows are enigmatic residents of fire-maintained open-pine ecosystems in the Southeast, and the species has been declining in response to fire-suppression and the extensive loss (~97%) of longleaf pine (*Pinus palustris*) ecosystems. Consequently, Bachman's sparrow is listed as a species of conservation concern across its range, but demographic mechanisms underlying declines and many aspects of its natural history remain poorly understood. To address these knowledge gaps, I investigated reproductive success, space-use, and habitat selection of Bachman’s sparrows across a fragmentation gradient in the Coastal Plain of North Carolina.
 
 &nbsp;
+----------------------------------------------------------------------------------------------------------------------------------
 
 ![BACS photo](/img/bacs_research.jpeg)
 
