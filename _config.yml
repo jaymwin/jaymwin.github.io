@@ -49,6 +49,7 @@ author:
   facebook: yourname  # eg. daattali
   github: jaymwin
   twitter: jmwiniar
+  instagram: jmwiniarski
   linkedin: yourlink  # eg. "pub/dean-attali/8/946/143"
   stackoverflow: yourlink  # eg. "3943160/daattali"
 
@@ -60,6 +61,7 @@ footer-links-active:
   facebook: false
   email: true
   twitter: true
+  instagram: true
   github: true
   linkedin: false
   stackoverflow: false
