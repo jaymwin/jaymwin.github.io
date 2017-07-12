@@ -16,7 +16,7 @@ Understanding aspects of Bachman’s sparrow breeding biology may provide valuab
 
 [Winiarski, J. M., A. C. Fish, C. E. Moorman, J. P. Carpenter, C. S. DePerno, and J. M. Schillaci. 2017. Nest-site selection and nest survival of Bachman’s Sparrows in two longleaf pine communities. *The Condor: Ornithological Applications* 119:361–374.](https://github.com/jaymwin/jaymwin.github.io/blob/master/pdfs/Winiarski_et_al_2017_Condor.pdf) 
 
-Check out the press release for the paper [here](https://americanornithologypubsblog.org/2017/05/31/new-details-on-nest-preferences-of-a-declining-sparrow/).
+Check out the press release for the paper [here](https://americanornithologypubsblog.org/2017/05/31/new-details-on-nest-preferences-of-a-declining-sparrow/)!
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
