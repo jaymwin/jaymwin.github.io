@@ -32,7 +32,7 @@ navbar-links:
     - Kestrel Trapping Locations: "trapping_map.html"
     - Kestrel Satellite Telemetry: "tracking_map.html"
   Additional Info:
-    - Kestrel Full Cycle Phenology Project: "https://fullcyclephenology.com/"
+    - Kestrel Full Cycle Phenology Project Website: "https://fullcyclephenology.com/"
     - Heath Lab @ BSU: "https://biology.boisestate.edu/gcebirds/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
