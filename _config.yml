@@ -28,9 +28,9 @@ navbar-links:
   Research:
     - American Kestrel Phenology: "amke_project"
     - Bachman's Sparrow Breeding Ecology: "bacs_project"
-  Maps:
+  Kestrel Tracking:
     #- Kestrel Trapping Locations: "trapping_map.html"
-    - Kestrel Satellite Telemetry: "tracking_map.html"
+    - Satellite Telemetry Locations: "tracking_map.html"
   Additional Info:
     - Kestrel Full Cycle Phenology Project Website: "https://fullcyclephenology.com/"
     - Heath Lab @ BSU: "https://biology.boisestate.edu/gcebirds/"
