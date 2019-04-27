@@ -11,7 +11,7 @@ I received my BS in Wildlife & Conservation Biology from the University of Rhode
 ### Contact Info
 
 **Jay Winiarski**  
-*PhD Student (beginning August 2017)*  
+PhD Student    
 Ecology, Evolution, & Behavior Program  
 Department of Biological Sciences  
 Boise State University  
