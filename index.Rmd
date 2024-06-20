@@ -1,0 +1,194 @@
+---
+title: "`r lubridate::year(lubridate::today())` Sierra Nevada Bioacoustic Monitoring"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    theme: journal
+    social: menu
+    source_code: embed
+    # runtime: shiny
+---
+
+```{r setup, include = FALSE}
+library(flexdashboard)
+library(shiny)
+library(plotly)
+library(CAbioacoustics)
+library(sf)
+library(tidyverse)
+library(mapview)
+
+# connect to spotted owl database -----------------------------------------
+
+# create connection
+# credentials stored in keyring
+cb_connect_db()
+
+deployments_df <-
+  tbl(conn, "acoustic_field_visits") |>
+  filter(survey_year == 2024) |>
+  glimpse() |>
+  select(
+    id, study_type, deploy_by, deploy_date, group_id, visit_id, survey_year, db_cell_id = cell_id,
+    unit_number, deployment_name, swift_id, cardin, utm_zone, utme, utmn) |>
+  collect() |>
+  mutate(zone_utm = utm_zone, northing_utm = utmn, easting_utm = utme)
+
+# disconnect
+cb_disconnect_db()
+
+# load hexes
+hexes_sf <-
+  cb_get_spatial('hexes') |>
+  select(cell_id, ownership)
+
+# convert to sf
+deployments_sf <-
+  deployments_df |>
+  dplyr::group_split(utm_zone) |>
+  purrr::map_dfr(cb_make_aru_sf) |>
+  rename(utm_zone = zone_utm, utme = easting_utm, utmn = northing_utm)
+
+# do point-in-polygon
+deployments_sf <-
+  st_join(deployments_sf, hexes_sf, join = st_within) |>
+  # this is the cell ID from the CAbioacoustics layer
+  rename(shp_cell_id = cell_id) |> 
+  select(cell_id = db_cell_id, deployment_name, deploy_date, ownership)
+
+cb_disconnect_db()
+
+total_deployments <- nrow(deployments_sf)
+cells_surveyed <- length(unique(deployments_sf$cell_id))
+updated <- lubridate::today()
+
+```
+
+## Sidebar {.sidebar}
+
+This is a data dashboard to view the status of University of Wisconsin - Madison passive acoustic monitoring efforts in the Sierra Nevada, California. More information on the project can be found [here](https://peery.russell.wisc.edu/bioacoustics/).
+
+Note that data are preliminary, and ARU deployments are jittered to keep locations confidential.
+
+**ARU deployments**: `r total_deployments`
+
+**Cells surveyed**: `r cells_surveyed`
+
+**Last updated**: `r updated`
+
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+
+### Current ARU deployments
+
+```{r}
+m1 <-
+  cb_get_spatial('sierra_study_area') |>
+  mapview(
+    layer.name = 'Study area',
+    alpha.regions = 0,
+    lwd = 2,
+    map.types = c('CartoDB.Positron', 'Esri.WorldImagery'),
+    legend = FALSE
+  )
+
+m2 <-
+  deployments_sf |>
+  st_transform(3310) |> 
+  st_jitter(amount = 200) |> 
+  mapview(layer.name = 'ARUs', col.regions = 'tomato')
+
+m3 <-
+  cb_get_spatial('usfs_boundaries') |>
+  mutate(
+    frst_nm = as.factor(str_remove(frst_nm, ' National Forest')),
+    frst_nm = fct_relevel(frst_nm, c('Lassen', 'Plumas', 'Tahoe', 'Eldorado', 'Stanislaus', 'Sierra', 'Sequoia'))
+  ) |> 
+  mapview(zcol = 'frst_nm', layer.name = 'National Forest')
+
+m4 <-
+  hexes_sf |> 
+  mapview(layer.name = 'Hexes', col.regions = NA, legend = FALSE)
+
+# make rendered html self-contained
+(deployment_map <- m1 + m3 + m4 + m2)
+```
+
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+### ARU deployments per National Forest
+
+```{r}
+p <-
+  deployments_sf |> 
+  st_drop_geometry() |> 
+  select(ownership) |> 
+  drop_na() |> 
+  group_by(ownership) |> 
+  tally() |> 
+  mutate(
+    ownership = as.factor(str_remove(ownership, ' National Forest')),
+    ownership = fct_relevel(ownership, c('Lassen', 'Plumas', 'Tahoe', 'Eldorado', 'Stanislaus', 'Sierra', 'Sequoia'))
+  ) |> 
+  ggplot() +
+  geom_col(aes(ownership, n, fill = ownership)) +
+  scale_fill_viridis_d(name = 'National Forest') +
+  theme_light() +
+  theme(legend.position = 'none', panel.grid.minor = element_blank()) +
+  labs(y = 'Number of ARUs', x = NULL)
+ggplotly(p)
+```
+
+### Cells surveyed per National Forest
+
+```{r}
+p <-
+  deployments_sf |> 
+  st_drop_geometry() |> 
+  select(cell_id, ownership) |> 
+  drop_na() |> 
+  distinct() |> 
+  group_by(ownership) |> 
+  tally() |> 
+  mutate(
+    ownership = as.factor(str_remove(ownership, ' National Forest')),
+    ownership = fct_relevel(ownership, c('Lassen', 'Plumas', 'Tahoe', 'Eldorado', 'Stanislaus', 'Sierra', 'Sequoia'))
+  ) |> 
+  ggplot() +
+  geom_col(aes(ownership, n, fill = ownership)) +
+  scale_fill_viridis_d(name = 'National Forest') +
+  theme_light() +
+  theme(legend.position = 'none', panel.grid.minor = element_blank()) +
+  labs(y = 'Number of cells', x = NULL)
+ggplotly(p)
+```
+
+<!-- ### ARU deployments {.value-box} -->
+
+<!-- ```{r} -->
+<!-- valueBox( -->
+<!--   value = nrow(deployments_sf), -->
+<!--   icon = "fa-microphone" -->
+<!-- ) -->
+<!-- ``` -->
+
+<!-- ### Cells surveyed {.value-box} -->
+
+<!-- ```{r} -->
+<!-- valueBox( -->
+<!--   value = length(unique(deployments_sf$cell_id)), -->
+<!--   icon = "glyphicon-check" -->
+<!-- ) -->
+<!-- ``` -->
+
+<!-- ### Last updated {.value-box} -->
+
+<!-- ```{r} -->
+<!-- valueBox( -->
+<!--   value = lubridate::today(), -->
+<!--   icon = "fa-calendar" -->
+<!-- ) -->
+<!-- ``` -->
