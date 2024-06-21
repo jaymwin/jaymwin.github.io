@@ -64,11 +64,13 @@ updated <- lubridate::today()
 
 ```
 
-## Sidebar {.sidebar}
+## About {.sidebar}
 
 This is a data dashboard to view the status of University of Wisconsin - Madison passive acoustic monitoring efforts in the Sierra Nevada, California. More information on the project can be found [here](https://peery.russell.wisc.edu/bioacoustics/).
 
-Note that data are preliminary, and ARU deployments are jittered to keep locations confidential.
+Note that data are preliminary and may contain errors. Autonomous recording unit (ARU) deployments are also jittered to keep locations confidential.
+
+<br>
 
 **ARU deployments**: `r total_deployments`
 
@@ -76,6 +78,15 @@ Note that data are preliminary, and ARU deployments are jittered to keep locatio
 
 **Last updated**: `r updated`
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+For questions, please contact Jay Winiarski, Ecological Data Analyst/Manager (jwiniarski@wisc.edu)
 
 Column {data-width=600}
 -----------------------------------------------------------------------
