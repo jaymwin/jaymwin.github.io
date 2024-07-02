@@ -26,13 +26,21 @@ cb_connect_db()
 
 deployments_df <-
   tbl(conn, "acoustic_field_visits") |>
-  filter(survey_year == 2024) |>
+  filter(survey_year == 2024 & is_invalid == 0) |>
   glimpse() |>
   select(
-    id, study_type, deploy_by, deploy_date, group_id, visit_id, survey_year, db_cell_id = cell_id,
+    id, study_type, deploy_by, deploy_date, recover_date, group_id, visit_id, survey_year, db_cell_id = cell_id,
     unit_number, deployment_name, swift_id, cardin, utm_zone, utme, utmn) |>
   collect() |>
-  mutate(zone_utm = utm_zone, northing_utm = utmn, easting_utm = utme)
+  mutate(
+    zone_utm = utm_zone, 
+    northing_utm = utmn, 
+    easting_utm = utme,
+    status = case_when(
+      !is.na(recover_date) ~ 'Retrieved',
+      TRUE ~ 'Deployed'
+    )
+  )
 
 # disconnect
 cb_disconnect_db()
@@ -54,11 +62,12 @@ deployments_sf <-
   st_join(deployments_sf, hexes_sf, join = st_within) |>
   # this is the cell ID from the CAbioacoustics layer
   rename(shp_cell_id = cell_id) |> 
-  select(cell_id = db_cell_id, deployment_name, deploy_date, ownership)
+  select(cell_id = db_cell_id, deployment_name, deploy_date, recover_date, status, ownership)
 
 cb_disconnect_db()
 
 total_deployments <- nrow(deployments_sf)
+retrieved_arus <- nrow(deployments_sf |> filter(status == 'Retrieved'))
 cells_surveyed <- length(unique(deployments_sf$cell_id))
 updated <- lubridate::today()
 
@@ -72,7 +81,9 @@ Note that data are preliminary and may contain errors. Autonomous recording unit
 
 <br>
 
-**ARU deployments**: `r total_deployments`
+**ARUs deployed**: `r total_deployments`
+
+**ARUs retrieved**: `r retrieved_arus`
 
 **Cells surveyed**: `r cells_surveyed`
 
@@ -108,7 +119,7 @@ m2 <-
   deployments_sf |>
   st_transform(3310) |> 
   st_jitter(amount = 200) |> 
-  mapview(layer.name = 'ARUs', col.regions = 'tomato')
+  mapview(layer.name = 'ARU status', zcol = 'status', col.regions = c('#0072B2', '#D55E00'))
 
 m3 <-
   cb_get_spatial('usfs_boundaries') |>
