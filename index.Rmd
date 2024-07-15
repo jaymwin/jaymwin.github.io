@@ -111,7 +111,7 @@ m1 <-
     layer.name = 'Study area',
     alpha.regions = 0,
     lwd = 2,
-    map.types = c('CartoDB.Positron', 'Esri.WorldImagery'),
+    map.types = c('CartoDB.Positron', 'OpenStreetMap', 'OpenTopoMap', 'Esri.WorldImagery'),
     legend = FALSE
   )
 
